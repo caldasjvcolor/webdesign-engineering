@@ -20,8 +20,9 @@ source map.
 
 ## Scope
 
-The seven local Skills cover architecture, production UI, SEO/AEO discoverability,
-truthful structured data, image assets, lead forms, and the final quality gate.
+The eight local Skills cover architecture, production UI, SEO/AEO discoverability,
+truthful structured data, image assets, lead forms, debugging remediation, and
+the final quality gate.
 They are guidance and routing, not a replacement for host permissions, tests,
 browser tooling, or human authority.
 
@@ -47,6 +48,12 @@ The curated catalogue listing returned HTTP 403, but direct repository/path
 installation succeeded for the three previously missing Skills. The manifest
 records the resolved commit SHAs, physical install paths, and update method.
 No upstream Skill body was copied into this repository.
+
+## Context efficiency
+
+See [the transversal context policy](.engineering/CONTEXT_EFFICIENCY.md) for
+progressive retrieval, bounded output, proportionate validation, and resumable
+milestone state.
 
 ## Local validation
 
@@ -95,3 +102,11 @@ graft ask "<repository question>" .
 The graph is an orientation and impact-tracing aid. It does not replace the
 source files, project profile, tests, or the web quality gate. The deep/LLM
 layer is intentionally not enabled in this repository.
+
+## Working with a material defect
+
+Use `$debugging-remediation` with the observed problem, the expected behaviour,
+and the available reproduction. Reproduce first when practical; do not patch a
+symptom. Consult upstream only when the Skill's triggers justify it, add the
+smallest appropriate regression coverage, and do not claim the defect is fixed
+without observed verification.

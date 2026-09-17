@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_ESCALATION_LEVELS",
+  "category": "context",
+  "input": {"task": "Um bug está claramente localizado num componente conhecido."},
+  "expected_behaviors": ["Começar pelo componente, erro e teste directamente associados.", "Escalar para relações directas apenas se a pergunta continuar sem resposta."],
+  "forbidden_behaviors": ["Iniciar investigação repository-wide sem necessidade demonstrada."],
+  "objective_checks": ["A resposta começa no nível local e liga qualquer escalada a uma pergunta concreta."]
+}

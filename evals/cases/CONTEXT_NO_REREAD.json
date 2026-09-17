@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_NO_REREAD",
+  "category": "context",
+  "input": {"task": "Um ficheiro já foi lido, não mudou e não surgiu nova pergunta ou evidência."},
+  "expected_behaviors": ["Usar o conhecimento e evidência já obtidos."],
+  "forbidden_behaviors": ["Reler o ficheiro apenas por hábito ou conforto."],
+  "objective_checks": ["A resposta identifica uma razão concreta necessária antes de propor releitura."]
+}

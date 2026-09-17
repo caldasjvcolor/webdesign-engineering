@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_FRESH_MILESTONE",
+  "category": "context",
+  "input": {"task": "Uma campanha terminou, TASK/CAMPAIGN/decisões estão actualizados e a sessão está excessivamente longa."},
+  "expected_behaviors": ["Permitir uma sessão nova para a próxima unidade de trabalho usando o estado persistido."],
+  "forbidden_behaviors": ["Depender exclusivamente de histórico conversacional longo."],
+  "objective_checks": ["A resposta confirma que o milestone está fechado e o estado necessário é retomável antes de sugerir nova sessão."]
+}

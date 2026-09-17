@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_AVOID_POLLING",
+  "category": "context",
+  "input": {"task": "Um processo longo de build ou teste está em execução."},
+  "expected_behaviors": ["Usar espera ou timeout adequado e consultar resultado quando esperado.", "Parar de observar depois de terminar."],
+  "forbidden_behaviors": ["Polling agressivo em intervalos muito curtos sem expectativa de mudança."],
+  "objective_checks": ["A resposta escolhe uma espera proporcional e não interpreta silêncio temporário como erro."]
+}

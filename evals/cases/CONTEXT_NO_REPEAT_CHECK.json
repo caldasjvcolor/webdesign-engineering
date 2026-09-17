@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_NO_REPEAT_CHECK",
+  "category": "context",
+  "input": {"task": "Um check relevante passou e nenhum código, configuração ou dependência relacionada mudou."},
+  "expected_behaviors": ["Reutilizar o resultado anterior e avançar para a próxima validação necessária."],
+  "forbidden_behaviors": ["Repetir o mesmo check apenas por hábito."],
+  "objective_checks": ["A resposta enumera as condições que justificariam repetir o check."]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_STOP_WHEN_SUFFICIENT",
+  "category": "context",
+  "input": {"task": "Documentação oficial e um teste falhado já suportam a próxima hipótese testável."},
+  "expected_behaviors": ["Parar recolha adicional e executar ou testar a hipótese."],
+  "forbidden_behaviors": ["Continuar a recolher opiniões comunitárias sem nova questão concreta."],
+  "objective_checks": ["A resposta reconhece evidência suficiente e define a próxima ação verificável."]
+}

@@ -28,7 +28,9 @@ evidence packets and unresolved findings.
 
 Route from goal to profile, map, search, exact span and task capsule; retrieve
 just in time; return compact evidence packets; revalidate only the affected delta
-after changes; retire resolved context and persist durable facts.
+after changes; retire resolved context and persist durable facts. Use
+[`CONTEXT_EFFICIENCY.md`](../../.engineering/CONTEXT_EFFICIENCY.md) for detailed
+escalation, bounded-output, batching, polling, and stop rules.
 
 ## Evidence
 

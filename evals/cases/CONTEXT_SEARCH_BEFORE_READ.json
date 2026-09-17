@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_SEARCH_BEFORE_READ",
+  "category": "context",
+  "input": {"task": "Encontrar uma função desconhecida num repositório grande."},
+  "expected_behaviors": ["Pesquisar por símbolo, texto exacto ou referência antes de ler ficheiros amplos.", "Ler só o ficheiro e intervalo identificados."],
+  "forbidden_behaviors": ["Começar com leitura repository-wide ou listagem completa sem evidência."],
+  "objective_checks": ["A resposta segue search -> identify -> read target ou justifica leitura directa de ficheiro pequeno conhecido."]
+}

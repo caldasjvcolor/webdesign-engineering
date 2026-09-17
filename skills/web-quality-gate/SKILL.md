@@ -31,7 +31,10 @@ is one signal, not the definition of done.
 
 1. Read the project profile, task scope, changed paths, and existing validation
    commands. Choose checks proportionate to the change rather than running an
-   unrelated full suite by reflex.
+   unrelated full suite by reflex. Follow
+   [`CONTEXT_EFFICIENCY.md`](../../.engineering/CONTEXT_EFFICIENCY.md) for
+   narrow-to-broad validation; do not repeat a successful unchanged check
+   unless its guarantee was invalidated or the final gate requires it.
 2. Run available typecheck, lint, focused tests, and production build checks.
    Record the exact command, result, environment, and limitations.
 3. Prefer the installed `playwright` Skill for real-browser QA when runtime
@@ -41,8 +44,16 @@ is one signal, not the definition of done.
 4. Inspect metadata, canonical URLs, robots, sitemap, structured data, image
    loading and alt text, semantic structure, keyboard access, and basic
    performance when those surfaces are in scope.
-5. Classify the result as `GO`, `GO_WITH_FIXES`, `NO_GO`, or `UNKNOWN`. Do not
-   convert an unavailable browser check into a passing claim.
+5. For a material defect or regression, use `debugging-remediation` before
+   treating it as fixed. An unresolved material regression or failing required
+   regression coverage is `NO_GO`; absent necessary verification, or an
+   unknown root cause that prevents a safe decision, is `UNKNOWN`.
+6. Classify the result as `GO`, `GO_WITH_FIXES`, `NO_GO`, or `UNKNOWN`. Do not
+   convert an unavailable browser check into a passing claim. Apply this order:
+   material failure -> `NO_GO`; insufficient material evidence -> `UNKNOWN`;
+   only documented non-blocking defects -> `GO_WITH_FIXES`; otherwise all
+   applicable material checks must positively pass for `GO`. A fix required
+   before publication is blocking, never `GO_WITH_FIXES`.
 
 ## Upstream delegation
 
@@ -54,10 +65,14 @@ is one signal, not the definition of done.
 
 ## Validation helper
 
-Run the deterministic preflight from a real web-project root:
+Resolve the helper from the actual directory containing this Skill's `SKILL.md`
+and pass the website root explicitly; the two may be separate repositories.
+Replace both placeholders with absolute paths (independent of the current directory):
 
 ```powershell
-.\skills\web-quality-gate\scripts\verify-web-project.ps1 -Root .
+$skillDirectory = '<absolute-path-to-web-quality-gate-skill>'
+$websiteRoot = '<absolute-path-to-website>'
+& (Join-Path $skillDirectory 'scripts/verify-web-project.ps1') -Root $websiteRoot
 ```
 
 Use `-RunChecks` only when the project owner has authorised running its local

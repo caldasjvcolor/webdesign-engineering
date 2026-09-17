@@ -1,21 +1,19 @@
 # Current task
 
-- Objective: correct the upstream Skill availability record and integrate the four required upstream capabilities without copying their bodies into this repository
+- Objective: integrate a transversal, evidence-preserving context-efficiency policy into the harness
 - Mode: STANDARD / DEEP
-- Scope in: direct repo/path installation, resolved commit SHAs, physical-path inventory, upstream delegation in the affected local Skills, manifest/README correction, structural validation and evals
-- Scope out: website application code, duplicated upstream guidance, secrets, deployment, external publication, automatic upstream mutation, and unnecessary edits to the seven local Skills
+- Scope in: policy owner, minimal root/profile/README/Skill routing, capability matrix, selected policy evals, and focused runner support
+- Scope out: DJ website code, new Skills, redesign of debugging remediation or quality-gate semantics, upstream refreshes, browser QA, deployment, commits, and pushes
 - Write owner: current agent, serialised across the toolkit
-- Baseline: target repository is clean at `90b5adc`; 25 repository Skills are validated; curated catalogue listing previously returned HTTP 403; three required external Skills were not yet installed
-- Pre-existing changes to preserve: all existing files, harness scaffold, local web Skills, project profiles, and Git history
-- Task-owned delta: install `nextjs`, `security-best-practices`, and `playwright`; verify the existing vendor-maintained React Skill; update routing and provenance records
-- Protected contracts: small root `AGENTS.md`; progressive disclosure; project facts isolated under `projects/`; no invented claims; no upstream Skill bodies copied locally
-- Evidence required: direct installer output, codeload/Git access distinction, resolved SHAs, complete installed-tree readback, all Skill validation and eval output
-- Validation plan: validate all repository Skills, parse JSON, run base and web evals, run the report-only updater, inspect the manifest and affected diffs
-- Rollback plan: revert only the task-owned manifest/docs/local-routing changes and remove only the three newly installed external Skill directories after explicit review; never reset unrelated Git history
-- Stop / escalation conditions: unresolved upstream identity, failed direct/fallback access, filesystem or credentials issue, validation failure, or external write requirement
-- Agents created / role / rationale: none; one write owner is sufficient for this cohesive integration change
-- Write owner boundaries (`WRITE_ALLOWED` / `WRITE_FORBIDDEN`): allowed under this repository and the explicitly requested Codex Skill installation paths; forbidden in unrelated repositories and external systems
-- Review gate and outcome: GO; direct installs, full Skill validation, base/web evals, update checker, JSON parse, and diff review passed
-- Correction loops used: 1; added `last_checked` and `version` compatibility fields for the report-only updater
+- Baseline: committed toolkit plus uncommitted validated remediation and quality-gate corrections
+- Protected contracts: existing quality-gate decision semantics, debugging-remediation workflow, immutable upstream SHAs, project facts under `projects/`, and no fictitious incidents
+- Evidence required: policy ownership/readability, selected context evals, local Skill validation, structural harness validation, manifest parse/SHA readback, and focused diff review
+- Validation plan: run `validate-skills.ps1`, execute only the new context eval IDs, run `Validate-Toolkit.ps1`, parse manifests, compare upstream SHAs, and inspect diffs
+- Rollback plan: remove only this task's policy, routing, matrix, and eval changes after readback; preserve prior uncommitted work
+- Stop / escalation conditions: any validation failure, accidental upstream SHA change, policy that encourages under-analysis, duplicate detailed guidance, or a request to begin website work
+- Review gate and outcome: GO; 26-Skill validation, 12 selected context evals,
+  structural harness validation, manifest parse/SHA comparison, and diff check
+  passed
 - Status: COMPLETE
-- Next action: start a separately scoped web-project implementation; newly installed Codex Skills are available on the next turn
+- Next action: apply the policy to the next independently scoped harness or
+  website task; persist the next milestone before extending session context

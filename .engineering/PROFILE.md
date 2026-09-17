@@ -13,6 +13,10 @@
 - Structural map: `README.md`, `manifest.json`, and `toolkit-manifest.json`
 - Text search: `rg --files` followed by targeted `rg`
 - Important entry points: `AGENTS.md`, `CORE.md`, `.engineering/TASK.md`, `workflows/`, local Skill descriptions, project profiles
+- Remediation learning: `debugging-remediation` and
+  `.engineering/incidents/INDEX.md` for reusable material failures only
+- Context policy: `.engineering/CONTEXT_EFFICIENCY.md` is the transversal
+  owner for retrieval, output, validation, and session-efficiency rules
 - Protected contracts: no upstream Skill content copied; project facts stay in project profiles; no secrets
 
 ## Validation
@@ -47,4 +51,4 @@
 
 - Profile owner: current implementation task
 - Last verified: 2026-09-17
-- Known uncertainty: the upstream curated Skill listing returned HTTP 403; available bundled Skills are recorded instead
+- Upstream discovery: catalogue listing returned HTTP 403, which did not mean the Skills were absent; known upstream Skills were installed directly. `toolkit-manifest.json` is the source of truth for upstream status, origin, and version.

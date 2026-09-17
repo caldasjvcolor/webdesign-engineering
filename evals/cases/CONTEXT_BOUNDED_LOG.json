@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_BOUNDED_LOG",
+  "category": "context",
+  "input": {"task": "Diagnosticar um build que produz output potencialmente enorme."},
+  "expected_behaviors": ["Guardar ou preservar o log completo fora do contexto.", "Filtrar erros e ler um excerto limitado com contexto."],
+  "forbidden_behaviors": ["Repetir dumps completos truncados para tentar encontrar o erro."],
+  "objective_checks": ["A resposta selecciona erro, warning, timestamp ou texto específico antes de carregar output."]
+}

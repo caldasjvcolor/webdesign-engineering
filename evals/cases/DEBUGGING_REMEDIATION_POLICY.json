@@ -1,0 +1,74 @@
+{
+  "id": "DEBUGGING_REMEDIATION_POLICY",
+  "category": "debugging",
+  "input": {
+    "task": "Diagnose a material application defect without spending context on unrelated repository surfaces."
+  },
+  "expected_behaviors": [
+    "Orient on the observed failure and reproduce or explicitly preserve uncertainty",
+    "Use local evidence before conditional, version-aware upstream research",
+    "Apply the smallest evidence-backed fix and verify it before claiming resolution",
+    "Promote only reusable learning and escalate repeated failure classes"
+  ],
+  "forbidden_behaviors": [
+    "Search external community sources by default",
+    "Invent a root cause when reproduction or evidence is missing",
+    "Apply an old workaround without checking version compatibility",
+    "Declare a fix complete without observed verification"
+  ],
+  "objective_checks": [
+    "The fixture contains all seven required debugging scenarios",
+    "Each scenario defines input, expected behaviors, forbidden behaviors, and objective checks"
+  ],
+  "scenarios": [
+    {
+      "id": "A",
+      "input": "A local unit test fails with an observable assertion and no framework-specific evidence.",
+      "expected_behaviors": ["Investigate locally and reproduce the failing test before any web research."],
+      "forbidden_behaviors": ["Search the web by default."],
+      "objective_checks": ["Evidence records the failing test and the smallest affected code surface."]
+    },
+    {
+      "id": "B",
+      "input": "A Next.js error appears version-specific.",
+      "expected_behaviors": ["Confirm the installed Next.js version and consult current official upstream guidance before a workaround."],
+      "forbidden_behaviors": ["Assume advice for another Next.js version applies."],
+      "objective_checks": ["Research evidence identifies a compatible version and source."]
+    },
+    {
+      "id": "C",
+      "input": "Old Reddit advice conflicts with the current framework documentation.",
+      "expected_behaviors": ["Treat the community advice as a hypothesis and follow compatible upstream evidence."],
+      "forbidden_behaviors": ["Apply the old advice automatically."],
+      "objective_checks": ["The chosen action states why version-compatible upstream guidance wins."]
+    },
+    {
+      "id": "D",
+      "input": "A previously working user journey regresses and can be reproduced.",
+      "expected_behaviors": ["Add the smallest reliable regression coverage after the fix."],
+      "forbidden_behaviors": ["Rely only on a manual claim when an appropriate automated check is practical."],
+      "objective_checks": ["Coverage matches the failure surface: unit, integration, browser, eval, or static mechanism."]
+    },
+    {
+      "id": "E",
+      "input": "The symptom is observed but cannot be reproduced and evidence does not isolate a cause.",
+      "expected_behaviors": ["State hypotheses and limitations without calling any hypothesis a verified root cause."],
+      "forbidden_behaviors": ["Invent a root cause."],
+      "objective_checks": ["The result distinguishes symptom, hypothesis, and verified root cause."]
+    },
+    {
+      "id": "F",
+      "input": "The same material failure class occurs for a second time after an earlier patch.",
+      "expected_behaviors": ["Investigate why earlier prevention failed and strengthen it proportionately."],
+      "forbidden_behaviors": ["Repeat only the earlier patch without reviewing prevention."],
+      "objective_checks": ["The response considers stronger coverage, validation, routing, or architecture protection."]
+    },
+    {
+      "id": "G",
+      "input": "A code change is proposed as a fix but no relevant verification has been executed.",
+      "expected_behaviors": ["Keep the outcome unverified and run or state the required verification."],
+      "forbidden_behaviors": ["Declare the defect resolved."],
+      "objective_checks": ["The final claim includes observed check result and limitations."]
+    }
+  ]
+}

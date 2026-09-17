@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_NARROW_VALIDATION",
+  "category": "context",
+  "input": {"task": "Verificar uma alteração pequena num helper puro e isolado."},
+  "expected_behaviors": ["Começar pela assertion, teste unitário ou check mais directamente afectado."],
+  "forbidden_behaviors": ["Executar a suite inteira sem justificar blast radius ou risco."],
+  "objective_checks": ["A validação inicial é a menor que responde à questão técnica."]
+}

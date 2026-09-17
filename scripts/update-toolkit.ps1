@@ -30,6 +30,7 @@ foreach ($entry in @($manifest.local_skills)) {
     }
     else { Write-Output "LOCAL_PRESENT skill=$($entry.skill) version=$($entry.version)" }
 }
-Write-Output 'UPDATE_PATH use the current official skill-installer for upstream Skills, review the diff, run validate-skills.ps1, then update toolkit-manifest.json manually.'
+Write-Output 'REPRODUCE_PATH follow each manifest reproduce_method with its recorded immutable commit; preserve existing installations.'
+Write-Output 'UPDATE_PATH follow each manifest update_method: stage a candidate revision, review and validate it, then update the recorded commit only after acceptance. This checker performs neither operation.'
 if ($problems -gt 0) { exit 1 }
 Write-Output "PASS toolkit_update_check root=$rootPath check_only=$CheckOnly"

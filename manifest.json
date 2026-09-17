@@ -32,6 +32,7 @@
     {"name": "task-planning", "path": "skills/task-planning/SKILL.md", "status": "GENERALIZABLE"},
     {"name": "feature-implementation", "path": "skills/feature-implementation/SKILL.md", "status": "GENERALIZABLE"},
     {"name": "debugging", "path": "skills/debugging/SKILL.md", "status": "GENERALIZABLE"},
+    {"name": "debugging-remediation", "path": "skills/debugging-remediation/SKILL.md", "status": "LOCAL_WEB_TOOLKIT"},
     {"name": "testing", "path": "skills/testing/SKILL.md", "status": "GENERALIZABLE"},
     {"name": "code-review", "path": "skills/code-review/SKILL.md", "status": "GENERALIZABLE"},
     {"name": "high-risk-change", "path": "skills/high-risk-change/SKILL.md", "status": "REQUIRES_CROSS_PROJECT_VALIDATION"},

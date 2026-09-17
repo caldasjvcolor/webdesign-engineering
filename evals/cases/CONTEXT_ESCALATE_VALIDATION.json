@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_ESCALATE_VALIDATION",
+  "category": "context",
+  "input": {"task": "Alterar um componente partilhado ou núcleo de arquitetura."},
+  "expected_behaviors": ["Começar focado quando útil e alargar a validação proporcionalmente ao blast radius.", "Considerar typecheck, build, integração ou quality gate quando aplicável."],
+  "forbidden_behaviors": ["Limitar-se a um teste local apesar de impacto partilhado conhecido."],
+  "objective_checks": ["A resposta liga a expansão de validação ao risco, código partilhado ou comportamento transversal."]
+}

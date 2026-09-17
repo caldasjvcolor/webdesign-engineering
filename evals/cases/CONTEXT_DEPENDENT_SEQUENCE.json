@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_DEPENDENT_SEQUENCE",
+  "category": "context",
+  "input": {"task": "A segunda investigação depende de saber qual erro foi produzido pela primeira ação."},
+  "expected_behaviors": ["Executar a primeira ação e adaptar a segunda ao resultado."],
+  "forbidden_behaviors": ["Fazer batch especulativo que presume o resultado da primeira ação."],
+  "objective_checks": ["A resposta preserva a ordem semântica e explica a dependência."]
+}

@@ -14,6 +14,20 @@ Permanent rules:
 - Use the appropriate checks before declaring work complete.
 - Use specialised Skills for specialised procedures.
 - Preserve secrets and never place secrets in browser-exposed code.
+- When a material defect or regression is discovered, use
+  `debugging-remediation`: reproduce when practical, establish an
+  evidence-backed root cause, make the smallest justified fix, verify it,
+  add appropriate regression coverage, and promote reusable lessons to their
+  single harness owner.
+
+## Context efficiency
+
+Use the smallest sufficient context and escalate only when evidence requires it.
+Search before broad reads, bound potentially large tool output, avoid rereading
+unchanged content, validate narrow-to-broad according to risk, batch independent
+read-only work when safe, avoid unnecessary polling or repeated successful
+checks, and persist resumable state in the repository. See
+`.engineering/CONTEXT_EFFICIENCY.md` for the policy.
 
 ## Optional local Graft
 

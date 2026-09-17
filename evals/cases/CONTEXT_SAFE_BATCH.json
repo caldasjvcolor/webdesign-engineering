@@ -1,0 +1,8 @@
+{
+  "id": "CONTEXT_SAFE_BATCH",
+  "category": "context",
+  "input": {"task": "Ler três ficheiros pequenos, independentes, necessários e já identificados."},
+  "expected_behaviors": ["Agrupar as leituras read-only quando a ferramenta o suporta."],
+  "forbidden_behaviors": ["Fazer três round trips seriais sem dependência."],
+  "objective_checks": ["A resposta verifica que as leituras são independentes, necessárias e sem conflito."]
+}

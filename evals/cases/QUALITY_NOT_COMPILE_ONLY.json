@@ -12,8 +12,17 @@
     "Treat an unavailable browser check as a pass",
     "Hide failed checks or omit their limitations"
   ],
+  "decision_cases": [
+    {"id": "A", "input": "All applicable material checks PASS with sufficient positive evidence; no outstanding defects.", "expected": "GO"},
+    {"id": "B", "input": "Required production build FAIL; other checks PASS.", "expected": "NO_GO"},
+    {"id": "C", "input": "Required material browser flow NOT_RUN; no known material failure.", "expected": "UNKNOWN"},
+    {"id": "D", "input": "All material checks PASS with sufficient evidence; only a documented non-blocking cosmetic defect remains, explicitly allowed after publication.", "expected": "GO_WITH_FIXES"},
+    {"id": "E", "input": "Required production build FAIL and required browser flow NOT_RUN.", "expected": "NO_GO"},
+    {"id": "F", "input": "All other checks PASS, but one known fix is mandatory before publication.", "expected": "NO_GO"}
+  ],
   "objective_checks": [
     "The gate records command, result, environment, and limitations",
-    "The final outcome is GO, GO_WITH_FIXES, NO_GO, or UNKNOWN"
+    "The final outcome is GO, GO_WITH_FIXES, NO_GO, or UNKNOWN",
+    "Evaluate each decision_cases input against the Skill decision rules without reading expected first; compare the resulting state with expected. Fixture schema validation alone is not a behavioral pass."
   ]
 }

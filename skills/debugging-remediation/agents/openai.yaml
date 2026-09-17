@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debugging Remediation"
+  short_description: "Diagnose failures and prevent regressions"
+  default_prompt: "Use $debugging-remediation to diagnose this defect and prevent recurrence."
