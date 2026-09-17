@@ -32,16 +32,21 @@ promoted into global Skills.
 
 Use available upstream/vendor-maintained capabilities when they cover the task:
 
+- `nextjs` from `openai/plugins` for Next.js App Router and runtime conventions;
 - `vercel-react-best-practices` for React/Next.js performance;
+- `security-best-practices` from `openai/skills` for JavaScript/TypeScript/React
+  security guidance;
+- `playwright` from `openai/skills` for real-browser QA;
 - `web-design-guidelines` for UI and accessibility review;
 - `computer-use` for Windows UI automation when available;
 - `imagegen` for generated or edited raster assets when explicitly needed;
 - `skill-creator`, `skill-installer`, and `openai-docs` for Skill lifecycle and
   current Codex guidance.
 
-The current upstream probe through `skill-installer` returned HTTP 403, so no
-additional external Skill was installed and no upstream content was copied.
-See `toolkit-manifest.json` for the recorded source and status.
+The curated catalogue listing returned HTTP 403, but direct repository/path
+installation succeeded for the three previously missing Skills. The manifest
+records the resolved commit SHAs, physical install paths, and update method.
+No upstream Skill body was copied into this repository.
 
 ## Local validation
 
@@ -70,3 +75,23 @@ claims, address, certification, or other unsupported business facts.
 Review upstream versions using the current official Codex/Skill mechanism,
 inspect the diff, preserve local changes, validate each Skill, and only then
 update the manifest. The local update checker is deliberately report-only.
+
+## Local Graft map
+
+This toolkit also has the optional local `@nanonets/graft` developer aid. The
+currently functional global CLI is `0.16.0`; its structural graph has been
+built at `graft/` for this repository and is ignored by Git because it is
+regenerable. The graph is not part of the website runtime or deployment.
+
+Useful commands from the repository root:
+
+```powershell
+graft build .
+graft check .
+graft map .
+graft ask "<repository question>" .
+```
+
+The graph is an orientation and impact-tracing aid. It does not replace the
+source files, project profile, tests, or the web quality gate. The deep/LLM
+layer is intentionally not enabled in this repository.

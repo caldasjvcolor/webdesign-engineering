@@ -34,14 +34,23 @@ is one signal, not the definition of done.
    unrelated full suite by reflex.
 2. Run available typecheck, lint, focused tests, and production build checks.
    Record the exact command, result, environment, and limitations.
-3. Use Playwright or the available browser QA capability when runtime behavior
-   matters. Check the affected user journey, console errors, broken links,
-   navigation, mobile and desktop layouts, and form states.
+3. Prefer the installed `playwright` Skill for real-browser QA when runtime
+   behavior matters. Check the affected user journey, console errors, broken
+   links, navigation, mobile and desktop layouts, and form states. Do not
+   duplicate Playwright's browser-driving procedure here.
 4. Inspect metadata, canonical URLs, robots, sitemap, structured data, image
    loading and alt text, semantic structure, keyboard access, and basic
    performance when those surfaces are in scope.
 5. Classify the result as `GO`, `GO_WITH_FIXES`, `NO_GO`, or `UNKNOWN`. Do not
    convert an unavailable browser check into a passing claim.
+
+## Upstream delegation
+
+- Use `playwright` as the preferred browser-QA capability when it is available;
+  this Skill decides what to verify and records the evidence.
+- Consult `security-best-practices` for untrusted input, Server Actions, forms,
+  external-service submissions, secrets, headers, CSP, XSS, CSRF, URL handling,
+  and third-party scripts. Do not reproduce its detailed guidance here.
 
 ## Validation helper
 

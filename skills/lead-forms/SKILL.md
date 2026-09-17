@@ -45,6 +45,14 @@ and a destination boundary that can evolve without rewriting the UI.
    untrusted redirect or HTML injection. Do not log raw personal data by
    default.
 
+## Upstream delegation
+
+When installed, delegate the security detail to `security-best-practices` for
+untrusted input, Server Actions, form handling, secrets, URL handling, XSS,
+CSRF, headers, CSP, or third-party scripts. Keep this Skill focused on the
+form contract, accessibility, validation boundary, and authorised destination;
+do not copy the upstream security references here.
+
 ## Boundaries
 
 Do not introduce a database, email provider, CRM, API call, analytics event, or

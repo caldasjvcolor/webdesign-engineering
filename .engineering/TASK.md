@@ -1,21 +1,21 @@
 # Current task
 
-- Objective: integrate the complete Engineering Agent Harness v0.2 as the base layer and implement the modular web-development extension on top of it
-- Mode: CAMPAIGN / DEEP
-- Scope in: complete base harness surfaces, seven focused web Skills, project-profile example, merged manifest, safe update path, deterministic scripts, eval fixtures, validation
-- Scope out: website application code, copied upstream Skill bodies, secrets, deployment, external publication, automatic upstream mutation
+- Objective: correct the upstream Skill availability record and integrate the four required upstream capabilities without copying their bodies into this repository
+- Mode: STANDARD / DEEP
+- Scope in: direct repo/path installation, resolved commit SHAs, physical-path inventory, upstream delegation in the affected local Skills, manifest/README correction, structural validation and evals
+- Scope out: website application code, duplicated upstream guidance, secrets, deployment, external publication, automatic upstream mutation, and unnecessary edits to the seven local Skills
 - Write owner: current agent, serialised across the toolkit
-- Baseline: new project contains web toolkit scaffold and `.engineering/` instance; base source surfaces were then integrated without copying the source repo's own `AGENTS.md`, `README.md`, or `.engineering/`
-- Pre-existing changes to preserve: all existing files and scaffold contents
-- Task-owned delta: toolkit implementation requested in the attached brief
-- Protected contracts: small root `AGENTS.md`; progressive disclosure; project facts isolated under `projects/`; no invented claims
-- Evidence required: Skill validator output, script smoke tests, eval output, manifest/tree readback
-- Validation plan: validate every `SKILL.md`, parse JSON, run scripts with valid and invalid fixtures, inspect final tree
-- Rollback plan: remove only task-owned toolkit files after explicit review; do not remove the installed harness scaffold automatically
-- Stop / escalation conditions: missing current upstream information, ambiguous fact ownership, validation failure, or external write requirement
-- Agents created / role / rationale: none; one write owner is sufficient for this cohesive repository-local change
-- Write owner boundaries (`WRITE_ALLOWED` / `WRITE_FORBIDDEN`): allowed under this repository; forbidden outside it, in upstream installations, and in external systems
-- Review gate and outcome: GO; fresh read-only review and integrated validator passed
-- Correction loops used: 2; runtime launcher correction and base-plus-extension compatibility correction
+- Baseline: target repository is clean at `90b5adc`; 25 repository Skills are validated; curated catalogue listing previously returned HTTP 403; three required external Skills were not yet installed
+- Pre-existing changes to preserve: all existing files, harness scaffold, local web Skills, project profiles, and Git history
+- Task-owned delta: install `nextjs`, `security-best-practices`, and `playwright`; verify the existing vendor-maintained React Skill; update routing and provenance records
+- Protected contracts: small root `AGENTS.md`; progressive disclosure; project facts isolated under `projects/`; no invented claims; no upstream Skill bodies copied locally
+- Evidence required: direct installer output, codeload/Git access distinction, resolved SHAs, complete installed-tree readback, all Skill validation and eval output
+- Validation plan: validate all repository Skills, parse JSON, run base and web evals, run the report-only updater, inspect the manifest and affected diffs
+- Rollback plan: revert only the task-owned manifest/docs/local-routing changes and remove only the three newly installed external Skill directories after explicit review; never reset unrelated Git history
+- Stop / escalation conditions: unresolved upstream identity, failed direct/fallback access, filesystem or credentials issue, validation failure, or external write requirement
+- Agents created / role / rationale: none; one write owner is sufficient for this cohesive integration change
+- Write owner boundaries (`WRITE_ALLOWED` / `WRITE_FORBIDDEN`): allowed under this repository and the explicitly requested Codex Skill installation paths; forbidden in unrelated repositories and external systems
+- Review gate and outcome: GO; direct installs, full Skill validation, base/web evals, update checker, JSON parse, and diff review passed
+- Correction loops used: 1; added `last_checked` and `version` compatibility fields for the report-only updater
 - Status: COMPLETE
-- Next action: use the complete base harness plus web extension for a separately scoped web-project implementation
+- Next action: start a separately scoped web-project implementation; newly installed Codex Skills are available on the next turn

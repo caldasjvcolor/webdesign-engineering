@@ -14,3 +14,18 @@ Permanent rules:
 - Use the appropriate checks before declaring work complete.
 - Use specialised Skills for specialised procedures.
 - Preserve secrets and never place secrets in browser-exposed code.
+
+## Optional local Graft
+
+Use the local Graft graph when repository orientation or impact tracing benefits
+from a structural map:
+
+- `graft build .` regenerates the local structural graph;
+- `graft check .` verifies that the graph is in sync;
+- `graft map .` provides a compact repository map;
+- `graft ask "<question>" .` can answer targeted repository questions.
+
+Treat Graft output as retrieval evidence, not completeness proof; confirm
+conclusions in the source, documentation, and tests. Keep `graft/` local and
+uncommitted. Do not run `graft build --deep` without an explicit need and
+authorised provider/API configuration.

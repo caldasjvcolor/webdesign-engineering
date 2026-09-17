@@ -49,6 +49,11 @@ database, authentication, microservices, or queues by default. These may be
 valid project decisions, but require explicit requirements and a separate
 scope. Do not copy framework documentation into this Skill.
 
+For Next.js runtime conventions, App Router, Server Components, Client
+Component boundaries, Server Actions, Route Handlers, layouts, metadata,
+caching, `next/image`, and related framework behavior, delegate to the
+installed `nextjs` Skill rather than reproducing its guidance here.
+
 For performance-sensitive React or Next.js implementation, use the available
 `vercel-react-best-practices` Skill rather than reproducing its rules here.
 

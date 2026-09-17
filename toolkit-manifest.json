@@ -1,7 +1,7 @@
 {
   "name": "webdesign-engineering-toolkit",
-  "version": "0.1.0",
-  "status": "EXPERIMENTAL",
+  "version": "0.1.1",
+  "status": "VALIDATED",
   "last_checked": "2026-09-17",
   "purpose": "Composable Codex Skills, project profiles, deterministic checks, and eval fixtures for modern web development.",
   "base_harness": {
@@ -14,21 +14,25 @@
     {"skill": "skill-creator", "type": "upstream", "source": "Bundled Codex system Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Create and validate local Agent Skills"},
     {"skill": "skill-installer", "type": "upstream", "source": "Bundled Codex system Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Install curated or repository-provided Skills"},
     {"skill": "openai-docs", "type": "upstream", "source": "Bundled Codex system Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Current official OpenAI and Codex guidance"},
-    {"skill": "vercel-react-best-practices", "type": "upstream", "source": "Bundled Codex Skill; Vercel Engineering", "version": "1.0.0", "last_checked": "2026-09-17", "purpose": "React and Next.js performance guidance"},
+    {"name": "nextjs", "skill": "nextjs", "type": "upstream", "repository": "openai/plugins", "path": "plugins/vercel/skills/nextjs", "commit": "1dc195897af4161d039b80d8471ec0a10c9bbc89", "date_checked": "2026-09-17", "last_checked": "2026-09-17", "status": "installed", "installed_path": "C:\\Users\\valen\\.codex\\skills\\nextjs", "update_method": "skill-installer --repo openai/plugins --path plugins/vercel/skills/nextjs --method auto", "version": "resolved-main", "purpose": "Next.js App Router and runtime conventions"},
+    {"name": "react-best-practices", "skill": "vercel-react-best-practices", "requested_name": "react-best-practices", "type": "upstream", "repository": "vercel-labs/agent-skills", "path": "skills/react-best-practices", "commit": "063bee94c3f4df8453406c830b0a7df0f2860278", "date_checked": "2026-09-17", "last_checked": "2026-09-17", "status": "installed-existing-verified", "installed_path": "C:\\Users\\valen\\.codex\\skills\\react-best-practices", "update_method": "vendor-maintained Skill verified against vercel-labs/agent-skills main; full tree/content match after LF normalization", "version": "1.0.0", "purpose": "React and Next.js performance guidance"},
+    {"name": "security-best-practices", "skill": "security-best-practices", "type": "upstream", "repository": "openai/skills", "path": "skills/.curated/security-best-practices", "commit": "49f948faa9258a0c61caceaf225e179651397431", "date_checked": "2026-09-17", "last_checked": "2026-09-17", "status": "installed", "installed_path": "C:\\Users\\valen\\.codex\\skills\\security-best-practices", "update_method": "skill-installer --repo openai/skills --path skills/.curated/security-best-practices --method auto", "version": "resolved-main", "purpose": "JavaScript/TypeScript/React secure-by-default guidance"},
+    {"name": "playwright", "skill": "playwright", "type": "upstream", "repository": "openai/skills", "path": "skills/.curated/playwright", "commit": "49f948faa9258a0c61caceaf225e179651397431", "date_checked": "2026-09-17", "last_checked": "2026-09-17", "status": "installed", "installed_path": "C:\\Users\\valen\\.codex\\skills\\playwright", "update_method": "skill-installer --repo openai/skills --path skills/.curated/playwright --method auto", "version": "resolved-main", "purpose": "Real-browser automation and UI-flow validation"},
     {"skill": "web-design-guidelines", "type": "upstream", "source": "Bundled Codex Skill; Vercel Web Interface Guidelines", "version": "1.0.0", "last_checked": "2026-09-17", "purpose": "UI, UX, and accessibility review"},
     {"skill": "computer-use", "type": "upstream", "source": "Bundled Codex plugin", "version": "26.908.70816", "last_checked": "2026-09-17", "purpose": "Windows UI and browser-adjacent automation"},
     {"skill": "imagegen", "type": "upstream", "source": "Bundled Codex Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Generate or edit raster assets when requested"}
   ],
   "upstream_probe": {
-    "method": "skill-installer list-skills.py --format json",
-    "result": "UNAVAILABLE",
-    "detail": "HTTP 403 from the curated-list endpoint; no external Skill was installed"
+    "catalog_listing": "FAILED",
+    "catalog_listing_method": "skill-installer list-skills.py --format json",
+    "catalog_listing_detail": "HTTP 403 from the curated-list GitHub API endpoint",
+    "direct_install": "SUCCEEDED",
+    "direct_install_method": "skill-installer --repo <owner>/<repo> --path <path> --method auto",
+    "codeload_access": "HTTP 200 for openai/plugins, openai/skills, and vercel-labs/agent-skills",
+    "git_access": "git ls-remote refs/heads/main succeeded for all three repositories",
+    "git_fallback": "NOT_NEEDED",
+    "credentials_or_filesystem_issue": "NOT_OBSERVED"
   },
-  "not_available_in_current_context": [
-    {"capability": "Next.js official/vendor Skill", "status": "NOT_FOUND_IN_AVAILABLE_SKILLS"},
-    {"capability": "security-best-practices Skill", "status": "NOT_FOUND_IN_AVAILABLE_SKILLS"},
-    {"capability": "Playwright Skill", "status": "NOT_FOUND_IN_AVAILABLE_SKILLS"}
-  ],
   "local_skills": [
     {"skill": "web-architecture", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Minimal Next.js App Router architecture decisions"},
     {"skill": "production-ui", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Responsive, accessible, consistent UI composition"},
@@ -47,5 +51,21 @@
     "eval_runner": "scripts/run-evals.ps1",
     "quality_gate": "skills/web-quality-gate/scripts/verify-web-project.ps1",
     "limitations": "Local structural checks do not prove browser, deployment, search-indexing, or external integration behavior."
+  },
+  "local_tooling": {
+    "graft": {
+      "package": "@nanonets/graft",
+      "version": "0.16.0",
+      "scope": "local-developer-aid",
+      "status": "installed-and-built",
+      "graph_path": "graft/",
+      "build_mode": "structural",
+      "deep_mode": "not-run",
+      "telemetry": "disabled-during-build",
+      "global_mcp": "existing configuration for another repository preserved",
+      "latest_checked": "0.18.0",
+      "latest_update_status": "blocked-native-build",
+      "latest_update_detail": "tree-sitter-kotlin link failed with Windows linker LNK1117 under Node 26/MSBuild"
+    }
   }
 }
