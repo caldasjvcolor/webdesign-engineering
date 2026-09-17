@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image Assets"
+  short_description: "Audit and integrate local web images"
+  default_prompt: "Use $image-assets to plan and audit image assets in a Next.js site."

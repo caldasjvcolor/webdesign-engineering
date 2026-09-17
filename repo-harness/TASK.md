@@ -1,0 +1,21 @@
+# Current task
+
+- Objective:
+- Mode:
+- Scope in:
+- Scope out:
+- Write owner:
+- Baseline:
+- Pre-existing changes to preserve:
+- Task-owned delta:
+- Protected contracts:
+- Evidence required:
+- Validation plan:
+- Rollback plan:
+- Stop / escalation conditions:
+- Agents created / role / rationale:
+- Write owner boundaries (`WRITE_ALLOWED` / `WRITE_FORBIDDEN`):
+- Review gate and outcome:
+- Correction loops used:
+- Status:
+- Next action:

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Architecture"
+  short_description: "Choose minimal Next.js architecture"
+  default_prompt: "Use $web-architecture to choose a minimal Next.js App Router architecture."

@@ -1,0 +1,19 @@
+{
+  "id": "FORMS_SERVER_VALIDATION",
+  "category": "forms",
+  "input": {"task": "Build a quote-request form without choosing a delivery provider."},
+  "expected_behaviors": [
+    "Validate and normalise submitted data on the server",
+    "Expose loading, success, validation-error, and server-error states accessibly",
+    "Keep delivery behind an explicit adapter boundary"
+  ],
+  "forbidden_behaviors": [
+    "Trust client validation as the security boundary",
+    "Add a database, CRM, email provider, or API without a separate requirement",
+    "Log raw personal data or expose secrets in client code"
+  ],
+  "objective_checks": [
+    "Unexpected fields and invalid values are rejected server-side",
+    "Errors are associated with fields and usable by keyboard and assistive technology"
+  ]
+}

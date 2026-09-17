@@ -1,0 +1,51 @@
+{
+  "name": "webdesign-engineering-toolkit",
+  "version": "0.1.0",
+  "status": "EXPERIMENTAL",
+  "last_checked": "2026-09-17",
+  "purpose": "Composable Codex Skills, project profiles, deterministic checks, and eval fixtures for modern web development.",
+  "base_harness": {
+    "manifest": "manifest.json",
+    "version": "0.2.0",
+    "status": "INTEGRATED",
+    "surfaces": ["CORE.md", "AGENT_ORCHESTRATION.md", "CHANGE_SAFETY.md", "TRUST_BOUNDARY.md", "MODES.md", "workflows/", "repo-harness/", "evals/"]
+  },
+  "upstream": [
+    {"skill": "skill-creator", "type": "upstream", "source": "Bundled Codex system Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Create and validate local Agent Skills"},
+    {"skill": "skill-installer", "type": "upstream", "source": "Bundled Codex system Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Install curated or repository-provided Skills"},
+    {"skill": "openai-docs", "type": "upstream", "source": "Bundled Codex system Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Current official OpenAI and Codex guidance"},
+    {"skill": "vercel-react-best-practices", "type": "upstream", "source": "Bundled Codex Skill; Vercel Engineering", "version": "1.0.0", "last_checked": "2026-09-17", "purpose": "React and Next.js performance guidance"},
+    {"skill": "web-design-guidelines", "type": "upstream", "source": "Bundled Codex Skill; Vercel Web Interface Guidelines", "version": "1.0.0", "last_checked": "2026-09-17", "purpose": "UI, UX, and accessibility review"},
+    {"skill": "computer-use", "type": "upstream", "source": "Bundled Codex plugin", "version": "26.908.70816", "last_checked": "2026-09-17", "purpose": "Windows UI and browser-adjacent automation"},
+    {"skill": "imagegen", "type": "upstream", "source": "Bundled Codex Skill", "version": "bundled", "last_checked": "2026-09-17", "purpose": "Generate or edit raster assets when requested"}
+  ],
+  "upstream_probe": {
+    "method": "skill-installer list-skills.py --format json",
+    "result": "UNAVAILABLE",
+    "detail": "HTTP 403 from the curated-list endpoint; no external Skill was installed"
+  },
+  "not_available_in_current_context": [
+    {"capability": "Next.js official/vendor Skill", "status": "NOT_FOUND_IN_AVAILABLE_SKILLS"},
+    {"capability": "security-best-practices Skill", "status": "NOT_FOUND_IN_AVAILABLE_SKILLS"},
+    {"capability": "Playwright Skill", "status": "NOT_FOUND_IN_AVAILABLE_SKILLS"}
+  ],
+  "local_skills": [
+    {"skill": "web-architecture", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Minimal Next.js App Router architecture decisions"},
+    {"skill": "production-ui", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Responsive, accessible, consistent UI composition"},
+    {"skill": "seo-aeo-discoverability", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Technical SEO, local SEO, AEO, and public content clarity"},
+    {"skill": "structured-data", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Truthful Schema.org and JSON-LD"},
+    {"skill": "image-assets", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Local image asset integration and deterministic audits"},
+    {"skill": "lead-forms", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Accessible server-validated lead forms and adapters"},
+    {"skill": "web-quality-gate", "type": "local", "source": "This toolkit", "version": "0.1.0", "purpose": "Evidence-based completion checks for web work"}
+  ],
+  "projects": [
+    {"name": "dj-joao-caldas", "path": "projects/dj-joao-caldas/PROJECT.md", "status": "EXAMPLE_PROFILE"}
+  ],
+  "validation": {
+    "skill_validator": "skill-creator quick_validate.py when available",
+    "local_validator": "scripts/validate-skills.ps1",
+    "eval_runner": "scripts/run-evals.ps1",
+    "quality_gate": "skills/web-quality-gate/scripts/verify-web-project.ps1",
+    "limitations": "Local structural checks do not prove browser, deployment, search-indexing, or external integration behavior."
+  }
+}

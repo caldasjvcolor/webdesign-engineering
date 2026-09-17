@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lead Forms"
+  short_description: "Build secure accessible lead forms"
+  default_prompt: "Use $lead-forms to design a validated accessible lead form."

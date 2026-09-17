@@ -1,0 +1,21 @@
+# Current task
+
+- Objective: integrate the complete Engineering Agent Harness v0.2 as the base layer and implement the modular web-development extension on top of it
+- Mode: CAMPAIGN / DEEP
+- Scope in: complete base harness surfaces, seven focused web Skills, project-profile example, merged manifest, safe update path, deterministic scripts, eval fixtures, validation
+- Scope out: website application code, copied upstream Skill bodies, secrets, deployment, external publication, automatic upstream mutation
+- Write owner: current agent, serialised across the toolkit
+- Baseline: new project contains web toolkit scaffold and `.engineering/` instance; base source surfaces were then integrated without copying the source repo's own `AGENTS.md`, `README.md`, or `.engineering/`
+- Pre-existing changes to preserve: all existing files and scaffold contents
+- Task-owned delta: toolkit implementation requested in the attached brief
+- Protected contracts: small root `AGENTS.md`; progressive disclosure; project facts isolated under `projects/`; no invented claims
+- Evidence required: Skill validator output, script smoke tests, eval output, manifest/tree readback
+- Validation plan: validate every `SKILL.md`, parse JSON, run scripts with valid and invalid fixtures, inspect final tree
+- Rollback plan: remove only task-owned toolkit files after explicit review; do not remove the installed harness scaffold automatically
+- Stop / escalation conditions: missing current upstream information, ambiguous fact ownership, validation failure, or external write requirement
+- Agents created / role / rationale: none; one write owner is sufficient for this cohesive repository-local change
+- Write owner boundaries (`WRITE_ALLOWED` / `WRITE_FORBIDDEN`): allowed under this repository; forbidden outside it, in upstream installations, and in external systems
+- Review gate and outcome: GO; fresh read-only review and integrated validator passed
+- Correction loops used: 2; runtime launcher correction and base-plus-extension compatibility correction
+- Status: COMPLETE
+- Next action: use the complete base harness plus web extension for a separately scoped web-project implementation

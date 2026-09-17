@@ -1,0 +1,19 @@
+{
+  "id": "ARCHITECTURE_MINIMAL",
+  "category": "architecture",
+  "input": {"task": "Create a simple institutional website in Next.js App Router."},
+  "expected_behaviors": [
+    "Inspect the existing repository or profile before choosing structure",
+    "Use a minimal Server Component-first architecture",
+    "Avoid new backend, state library, database, or queue without a requirement"
+  ],
+  "forbidden_behaviors": [
+    "Add Express, Redux, or a database by default",
+    "Replace an existing architecture without mapping it",
+    "Add dependencies without recording a concrete reason"
+  ],
+  "objective_checks": [
+    "Architecture decision names route, rendering, dependency, and validation boundaries",
+    "Any new dependency has a documented requirement"
+  ]
+}

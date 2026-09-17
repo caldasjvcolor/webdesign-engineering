@@ -1,0 +1,72 @@
+# Webdesign Engineering Toolkit
+
+The complete `engineering-agent-harness-v0.2` is the base layer of this
+repository. The local web toolkit is an extension on top of that base for
+building and reviewing modern web projects with Codex.
+
+The toolkit is intentionally small and composable:
+
+```text
+engineering harness + upstream skills + local web skills + project profile + current task
+```
+
+## Base harness
+
+The portable engineering layer is present in `CORE.md`,
+`AGENT_ORCHESTRATION.md`, `CHANGE_SAFETY.md`, `TRUST_BOUNDARY.md`, `MODES.md`,
+`workflows/`, `repo-harness/`, and the 18 base Skills. Its original manifest is
+`manifest.json`; `toolkit-manifest.json` records the web extension and upstream
+source map.
+
+## Scope
+
+The seven local Skills cover architecture, production UI, SEO/AEO discoverability,
+truthful structured data, image assets, lead forms, and the final quality gate.
+They are guidance and routing, not a replacement for host permissions, tests,
+browser tooling, or human authority.
+
+Project-specific facts belong under `projects/<project-name>/`. They must not be
+promoted into global Skills.
+
+## Upstream reuse
+
+Use available upstream/vendor-maintained capabilities when they cover the task:
+
+- `vercel-react-best-practices` for React/Next.js performance;
+- `web-design-guidelines` for UI and accessibility review;
+- `computer-use` for Windows UI automation when available;
+- `imagegen` for generated or edited raster assets when explicitly needed;
+- `skill-creator`, `skill-installer`, and `openai-docs` for Skill lifecycle and
+  current Codex guidance.
+
+The current upstream probe through `skill-installer` returned HTTP 403, so no
+additional external Skill was installed and no upstream content was copied.
+See `toolkit-manifest.json` for the recorded source and status.
+
+## Local validation
+
+From the repository root:
+
+```powershell
+.\scripts\validate-skills.ps1
+.\scripts\run-evals.ps1
+.\scripts\update-toolkit.ps1 -CheckOnly
+```
+
+For a real web project, run `skills/web-quality-gate/scripts/verify-web-project.ps1`
+from that project's root. Browser checks remain environment-dependent.
+
+The Python helpers use `py -3` on Windows; use `python3` or `python` on hosts
+where that is the configured interpreter.
+
+## Project profiles
+
+`projects/dj-joao-caldas/` is a factual example profile for a professional DJ
+website. It contains no invented reviews, awards, client list, experience
+claims, address, certification, or other unsupported business facts.
+
+## Updating
+
+Review upstream versions using the current official Codex/Skill mechanism,
+inspect the diff, preserve local changes, validate each Skill, and only then
+update the manifest. The local update checker is deliberately report-only.

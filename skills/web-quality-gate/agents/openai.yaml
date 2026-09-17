@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Quality Gate"
+  short_description: "Verify web work before completion"
+  default_prompt: "Use $web-quality-gate to verify whether a web change is ready to ship."

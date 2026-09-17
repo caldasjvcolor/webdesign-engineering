@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Example Professional Service",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5"
+  }
+}

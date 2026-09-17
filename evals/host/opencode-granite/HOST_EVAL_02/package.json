@@ -1,0 +1,9 @@
+{
+  "name": "host-eval-02-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/visible.test.js",
+    "semantic": "node tests/semantic.validate.js"
+  }
+}

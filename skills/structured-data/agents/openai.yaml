@@ -1,0 +1,4 @@
+interface:
+  display_name: "Structured Data"
+  short_description: "Create truthful Schema.org JSON-LD"
+  default_prompt: "Use $structured-data to design and validate truthful JSON-LD."

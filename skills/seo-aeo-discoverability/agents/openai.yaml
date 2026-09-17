@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO and AEO"
+  short_description: "Improve search and AI discoverability"
+  default_prompt: "Use $seo-aeo-discoverability to audit SEO, local SEO, and AI discoverability."

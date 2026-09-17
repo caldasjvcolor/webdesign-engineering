@@ -1,0 +1,18 @@
+{
+  "id": "HOST_EVAL_02",
+  "version": "1.0.0",
+  "fixture_path": "evals/host/opencode-granite/HOST_EVAL_02",
+  "fixture_hash": "0E2682FE790E9E4A742B5BF1479CF3212402C4D66F870D16C5703D4A517855B6",
+  "hash_basis": "SHA-256 of sorted functional file paths plus their SHA-256 values; metadata.json excluded",
+  "expected_working_directory": "evals/host/opencode-granite/HOST_EVAL_02",
+  "allowed_write_scope": [
+    "src/score.js"
+  ],
+  "visible_test_command": "npm test",
+  "semantic_validation_command": "npm run semantic",
+  "network_required": false,
+  "external_side_effects": "none",
+  "dependency_installation_required": false,
+  "initial_state": "selectEligible excludes items exactly at minimumScore",
+  "reference_validation_only": true
+}

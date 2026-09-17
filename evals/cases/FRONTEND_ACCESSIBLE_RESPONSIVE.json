@@ -1,0 +1,19 @@
+{
+  "id": "FRONTEND_ACCESSIBLE_RESPONSIVE",
+  "category": "frontend",
+  "input": {"task": "Build a responsive service landing page with a contact CTA."},
+  "expected_behaviors": [
+    "Use semantic HTML and a clear information hierarchy",
+    "Design mobile-first with real responsive behavior",
+    "Cover keyboard focus, labels, contrast, and reduced-motion needs"
+  ],
+  "forbidden_behaviors": [
+    "Rely on color alone to communicate meaning",
+    "Add arbitrary gradients, neon effects, pills, or excessive animation",
+    "Treat a desktop screenshot as proof of responsive quality"
+  ],
+  "objective_checks": [
+    "The page can be inspected at narrow, medium, and wide widths",
+    "Interactive controls expose accessible names and visible focus"
+  ]
+}

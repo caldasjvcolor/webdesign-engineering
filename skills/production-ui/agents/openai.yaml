@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production UI"
+  short_description: "Build accessible responsive UI"
+  default_prompt: "Use $production-ui to design a responsive accessible interface."

@@ -1,0 +1,6 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Example Professional Service",
+  "serviceType": "Professional service"
+}

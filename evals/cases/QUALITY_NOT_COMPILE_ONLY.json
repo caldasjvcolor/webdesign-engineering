@@ -1,0 +1,19 @@
+{
+  "id": "QUALITY_NOT_COMPILE_ONLY",
+  "category": "quality",
+  "input": {"task": "Finish a web feature and decide whether it is ready."},
+  "expected_behaviors": [
+    "Run relevant typecheck, lint, tests, and production build checks",
+    "Use browser QA for affected runtime journeys when available",
+    "Report metadata, forms, images, accessibility, and responsive checks when in scope"
+  ],
+  "forbidden_behaviors": [
+    "Mark the feature done because it compiles",
+    "Treat an unavailable browser check as a pass",
+    "Hide failed checks or omit their limitations"
+  ],
+  "objective_checks": [
+    "The gate records command, result, environment, and limitations",
+    "The final outcome is GO, GO_WITH_FIXES, NO_GO, or UNKNOWN"
+  ]
+}

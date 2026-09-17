@@ -1,0 +1,19 @@
+{
+  "id": "SEO_LOCAL_FACTUAL",
+  "category": "seo",
+  "input": {"task": "Create a local service page discoverable by search engines and answer systems."},
+  "expected_behaviors": [
+    "Provide specific title, description, canonical handling, and crawlable navigation",
+    "Make WHO, WHAT, WHERE, SERVICES, and HOW TO CONTACT clear where supported",
+    "Keep local and entity claims aligned with project sources"
+  ],
+  "forbidden_behaviors": [
+    "Promise rankings or inclusion in AI answers",
+    "Use keyword stuffing or hidden text",
+    "Invent an address, reviews, awards, phone number, or service area"
+  ],
+  "objective_checks": [
+    "Metadata and visible headings have one coherent page intent",
+    "Unsupported facts are absent or marked unknown"
+  ]
+}
