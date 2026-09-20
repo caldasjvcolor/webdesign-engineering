@@ -1,4 +1,4 @@
-# Webdesign Engineering Toolkit
+# Engineering Agent Harness for Software & Web Development
 
 The complete `engineering-agent-harness-v0.2` is the base layer of this
 repository. The local web toolkit is an extension on top of that base for
